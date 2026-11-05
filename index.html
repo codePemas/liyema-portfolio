@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liyema Vanda — Full-Stack Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warm: {
+                            bg: '#FAF8F5',
+                            card: '#FFFFFF',
+                            border: '#EEEAE5',
+                            terracotta: '#C85A32',
+                            terracottaHover: '#B24B25',
+                            textDark: '#1A1817',
+                            textMuted: '#66615C',
+                            tagBg: '#F3EFEA'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Instrument Serif', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF8F5;
+            background-image: radial-gradient(#E5E0D8 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+            color: #1A1817;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .editorial-heading {
+            font-family: 'Instrument Serif', serif;
+        }
+
+        .filter-chip.active {
+            background-color: #C85A32 !important;
+            color: #FFFFFF !important;
+            border-color: #C85A32 !important;
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.03);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#C85A32] selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-warm-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#about" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-warm-terracotta text-white flex items-center justify-center font-serif text-xl font-bold">
+                    L
+                </div>
+                <span class="font-serif text-2xl font-bold tracking-tight text-warm-textDark">
+                    Liyema Vanda<span class="text-warm-terracotta">.</span>
+                </span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-warm-textDark">
+                <a href="#about" class="hover:text-warm-terracotta transition-colors">About</a>
+                <a href="#stack" class="hover:text-warm-terracotta transition-colors">Tech Stack</a>
+                <a href="#work" class="hover:text-warm-terracotta transition-colors">Featured Work</a>
+                <a href="#capabilities" class="hover:text-warm-terracotta transition-colors">Capabilities</a>
+                <a href="#contact" class="hover:text-warm-terracotta transition-colors">Contact</a>
+            </nav>
+
+            <a href="#contact" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-warm-terracotta hover:bg-warm-terracottaHover text-white font-semibold text-sm transition-all shadow-md">
+                LET'S TALK <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="pt-16 pb-20 px-6 max-w-7xl mx-auto">
+            <div class="space-y-8 max-w-5xl">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Available for Software & Engineering Projects
+                </div>
+                
+                <h1 class="editorial-heading text-5xl sm:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-warm-textDark">
+    Building full-stack web platforms & <span class="italic text-warm-terracotta">resilient database pipelines.</span>
+</h1>
+
+<p class="text-warm-textMuted text-xl sm:text-2xl max-w-3xl font-normal leading-relaxed">
+    Hi, I'm <strong class="text-warm-textDark font-semibold">Liyema Vanda</strong>. A Software Developer and Information Systems specialist focused on building reliable digital products. I design and deploy robust web applications, RESTful services, and serverless data layers using <strong class="text-warm-textDark font-semibold">Next.js, Tailwind CSS, .NET, FastAPI, and Neon PostgreSQL</strong>.
+</p>
+                <div class="flex flex-wrap items-center gap-4 pt-4">
+                    <a href="#work" class="px-7 py-3.5 rounded-full bg-warm-terracotta hover:bg-warm-terracottaHover text-white font-semibold text-base transition-all shadow-lg flex items-center gap-2">
+                        Explore Portfolio <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#contact" class="px-7 py-3.5 rounded-full border border-warm-border bg-white text-warm-textDark font-semibold text-base transition-all hover:bg-warm-tagBg flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-4 h-4 text-warm-terracotta"></i> Download CV
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Picture Frame (Resized with object-contain to fit perfectly) -->
+            <div class="mt-16 relative max-w-2xl mx-auto">
+                <div class="bg-white p-4 sm:p-6 rounded-3xl border border-warm-border card-shadow text-center space-y-4">
+                    <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden bg-slate-900 relative">
+                        <img src="liyema-photo.jpg" alt="Liyema Vanda" class="w-full h-full object-contain object-center" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900/60 to-purple-900/40 items-center justify-center hidden">
+                            <i data-lucide="user" class="w-20 h-20 text-indigo-300 opacity-80"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-warm-tagBg/70 p-4 rounded-xl border border-warm-border/60 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-warm-terracotta/10 text-warm-terracotta flex items-center justify-center">
+                                <i data-lucide="code" class="w-5 h-5"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="font-bold text-warm-textDark text-sm">SOFTWARE DEVELOPER</div>
+                                <div class="text-xs text-warm-textMuted">Clean Architecture Focus</div>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 rounded-md bg-white border border-warm-border text-xs font-mono font-medium text-warm-textMuted">Full-Stack</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="py-12 bg-white border-y border-warm-border">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-warm-border">
+                <div class="space-y-1">
+                    <div class="editorial-heading text-4xl sm:text-5xl font-bold text-warm-textDark">6+</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-warm-textMuted">LIVE APPLICATIONS</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="editorial-heading text-4xl sm:text-5xl font-bold text-warm-textDark">100%</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-warm-textMuted">CLEAN CODE STANDARD</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="editorial-heading text-4xl sm:text-5xl font-bold text-warm-textDark">Multi-Stack</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-warm-textMuted">WEB, MOBILE & APIS</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="editorial-heading text-4xl sm:text-5xl font-bold text-warm-textDark">Production</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-warm-textMuted">READY ARCHITECTURE</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="stack" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="text-center space-y-3 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-warm-terracotta">TECHNOLOGY EXPERTISE</span>
+                <h2 class="editorial-heading text-4xl sm:text-6xl text-warm-textDark">Crafting solutions with modern engineering tools</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="bg-white p-8 rounded-3xl border border-warm-border card-shadow space-y-6">
+                    <div class="w-12 h-12 rounded-2xl bg-warm-tagBg flex items-center justify-center text-warm-terracotta">
+                        <i data-lucide="layout" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-warm-textDark">Frontend & Web</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">Next.js</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">React</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">TypeScript</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">Tailwind CSS</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">ASP.NET Web Forms</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="bg-white p-8 rounded-3xl border border-warm-border card-shadow space-y-6">
+                    <div class="w-12 h-12 rounded-2xl bg-warm-tagBg flex items-center justify-center text-warm-terracotta">
+                        <i data-lucide="server" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-warm-textDark">Backend & APIs</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">ASP.NET Core MVC</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">C#</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">Python</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">FastAPI</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">RESTful APIs</span>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="bg-white p-8 rounded-3xl border border-warm-border card-shadow space-y-6">
+                    <div class="w-12 h-12 rounded-2xl bg-warm-tagBg flex items-center justify-center text-warm-terracotta">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-warm-textDark">Databases & DevOps</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">PostgreSQL (Neon)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">SQL Server</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">SQLite</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">Prisma ORM</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-warm-tagBg border border-warm-border text-xs font-medium text-warm-textDark">Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Showcase (Clean Side-by-Side 2-Column Grid for ALL projects) -->
+        <section id="work" class="py-24 px-6 max-w-7xl mx-auto border-t border-warm-border">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+                <h2 class="editorial-heading text-4xl sm:text-6xl text-warm-textDark">
+                    Featured Projects & Applications
+                </h2>
+
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterProjects('all', this)" class="filter-chip active px-5 py-2 rounded-full border border-warm-border text-xs font-semibold bg-white text-warm-textDark transition-all">All Projects</button>
+                    <button onclick="filterProjects('erp', this)" class="filter-chip px-5 py-2 rounded-full border border-warm-border text-xs font-semibold bg-white text-warm-textDark transition-all">Enterprise ERP</button>
+                    <button onclick="filterProjects('web', this)" class="filter-chip px-5 py-2 rounded-full border border-warm-border text-xs font-semibold bg-white text-warm-textDark transition-all">Web Applications</button>
+                    <button onclick="filterProjects('backend', this)" class="filter-chip px-5 py-2 rounded-full border border-warm-border text-xs font-semibold bg-white text-warm-textDark transition-all">Backend Engines</button>
+                </div>
+            </div>
+
+            <!-- Grid Container fixed to 2 columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- 1. Binary-POS Enterprise -->
+                <div class="project-card bg-white p-8 rounded-3xl border border-warm-border card-shadow flex flex-col justify-between space-y-6" data-category="erp">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-warm-terracotta/10 text-warm-terracotta text-xs font-bold uppercase tracking-wider">ENTERPRISE ERP</span>
+                            <a href="https://binary-pos.vercel.app" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-warm-textMuted hover:text-warm-terracotta flex items-center gap-1">Demo <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                        <h3 class="editorial-heading text-3xl text-warm-textDark font-bold">Binary-POS Enterprise</h3>
+                        <p class="text-warm-textMuted text-base leading-relaxed">
+                            A complete multi-store Point of Sale and inventory platform built with Next.js, Tailwind CSS, Prisma ORM, and Neon PostgreSQL cloud database. Features live receipt generation, cashier/manager PIN access, and shift auditing.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-warm-textMuted pt-4 border-t border-warm-border/60">
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Next.js</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Tailwind CSS</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Neon PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- 2. BetwayDiskiFantasy Engine -->
+                <div class="project-card bg-white p-8 rounded-3xl border border-warm-border card-shadow flex flex-col justify-between space-y-6" data-category="backend">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-warm-terracotta/10 text-warm-terracotta text-xs font-bold uppercase tracking-wider">BACKEND SYSTEM</span>
+                            <a href="https://betway-diski-fantasy.vercel.app" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-warm-textMuted hover:text-warm-terracotta flex items-center gap-1">Demo <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                        <h3 class="editorial-heading text-3xl text-warm-textDark font-bold">BetwayDiskiFantasy Engine</h3>
+                        <p class="text-warm-textMuted text-base leading-relaxed">
+                            High-performance sports fantasy scoring and league computation service built using C# and ASP.NET Core Web API with custom squad transfers and leaderboard calculations.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-warm-textMuted pt-4 border-t border-warm-border/60">
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">C#</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">.NET Web API</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">SQLite</span>
+                    </div>
+                </div>
+
+                <!-- 3. Sisipho's Lass Website -->
+                <div class="project-card bg-white p-8 rounded-3xl border border-warm-border card-shadow flex flex-col justify-between space-y-6" data-category="web">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-warm-terracotta/10 text-warm-terracotta text-xs font-bold uppercase tracking-wider">CLIENT WEBSITE</span>
+                            <a href="https://lass-website.vercel.app" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-warm-textMuted hover:text-warm-terracotta flex items-center gap-1">Demo <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                        <h3 class="editorial-heading text-3xl text-warm-textDark font-bold">Sisipho's Lass Website</h3>
+                        <p class="text-warm-textMuted text-base leading-relaxed">
+                            An informative customer-interactive web platform designed and deployed to promote health and wealth solutions, featuring tailored dynamic pricing layouts and responsive components.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-warm-textMuted pt-4 border-t border-warm-border/60">
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Next.js</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Tailwind CSS</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Vercel</span>
+                    </div>
+                </div>
+
+                <!-- 4. Loan Application Portal -->
+                <div class="project-card bg-white p-8 rounded-3xl border border-warm-border card-shadow flex flex-col justify-between space-y-6" data-category="web">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-warm-terracotta/10 text-warm-terracotta text-xs font-bold uppercase tracking-wider">WEB APPLICATION</span>
+                            <a href="https://social-workspace-dusky.vercel.app" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-warm-textMuted hover:text-warm-terracotta flex items-center gap-1">Demo <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                        <h3 class="editorial-heading text-3xl text-warm-textDark font-bold">Loan Application Portal</h3>
+                        <p class="text-warm-textMuted text-base leading-relaxed">
+                            A responsive financial loan application system featuring real-time submission handling, form validation state management, and automated email dispatching powered by Resend API integration.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-warm-textMuted pt-4 border-t border-warm-border/60">
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Next.js</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Tailwind CSS</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Resend API</span>
+                    </div>
+                </div>
+
+                <!-- 5. UCT Geopolitics Simulation Engine -->
+                <div class="project-card bg-white p-8 rounded-3xl border border-warm-border card-shadow flex flex-col justify-between space-y-6" data-category="backend">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-warm-terracotta/10 text-warm-terracotta text-xs font-bold uppercase tracking-wider">AI SIMULATION APP</span>
+                            <a href="https://uct-geopolitics-game-mu.vercel.app" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-warm-textMuted hover:text-warm-terracotta flex items-center gap-1">Demo <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                        <h3 class="editorial-heading text-3xl text-warm-textDark font-bold">Geopolitics Simulation Engine</h3>
+                        <p class="text-warm-textMuted text-base leading-relaxed">
+                            Advanced geopolitical strategy simulator built with MongoDB data layers and integrated Google Gemini API endpoints for automated decision justifications and dynamic battle commentary.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-warm-textMuted pt-4 border-t border-warm-border/60">
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Next.js</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">MongoDB</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Gemini API</span>
+                    </div>
+                </div>
+
+                <!-- 6. Ornate Sneaker Laundry -->
+                <div class="project-card bg-white p-8 rounded-3xl border border-warm-border card-shadow flex flex-col justify-between space-y-6" data-category="web">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-warm-terracotta/10 text-warm-terracotta text-xs font-bold uppercase tracking-wider">PRODUCTION DOMAIN</span>
+                            <a href="https://www.ornatecleaning.co.za" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-warm-textMuted hover:text-warm-terracotta flex items-center gap-1">Live Site <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+                        </div>
+                        <h3 class="editorial-heading text-3xl text-warm-textDark font-bold">Ornate Sneaker Laundry</h3>
+                        <p class="text-warm-textMuted text-base leading-relaxed">
+                            Professional service landing platform engineered for a shoe care enterprise, featuring custom service tier cards, clean booking layouts, and configured custom AfriHost DNS routing.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-warm-textMuted pt-4 border-t border-warm-border/60">
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Next.js</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">Tailwind CSS</span>
+                        <span class="px-3 py-1 rounded-md bg-warm-tagBg border border-warm-border">AfriHost DNS</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Core Engineering Approach -->
+        <section id="capabilities" class="py-24 px-6 max-w-7xl mx-auto border-t border-warm-border">
+            <div class="text-center space-y-3 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-warm-terracotta">CORE ENGINEERING APPROACH</span>
+                <h2 class="editorial-heading text-4xl sm:text-6xl text-warm-textDark">How I approach software development</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-3xl border border-warm-border card-shadow space-y-4">
+                    <div class="w-10 h-10 rounded-full bg-warm-tagBg text-warm-terracotta flex items-center justify-center font-bold">1</div>
+                    <h3 class="editorial-heading text-3xl font-bold text-warm-textDark">Domain-Driven Backend Logic</h3>
+                    <p class="text-warm-textMuted leading-relaxed">
+                        Structuring clean entity relationships, modular controllers, and efficient database indexing to keep backend APIs responsive and scalable under production loads.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-warm-border card-shadow space-y-4">
+                    <div class="w-10 h-10 rounded-full bg-warm-tagBg text-warm-terracotta flex items-center justify-center font-bold">2</div>
+                    <h3 class="editorial-heading text-3xl font-bold text-warm-textDark">Intuitive User Experiences</h3>
+                    <p class="text-warm-textMuted leading-relaxed">
+                        Combining ergonomic visual design with fast client-side state handling to ensure web applications feel responsive and natural to navigate.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-6 max-w-7xl mx-auto border-t border-warm-border">
+            <div class="text-center space-y-3 mb-16 max-w-2xl mx-auto">
+                <h2 class="editorial-heading text-4xl sm:text-6xl text-warm-textDark">Let's build something together</h2>
+                <p class="text-warm-textMuted text-lg">Have a position available? A project to discuss, or just want to say hello? Send a direct message below.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto">
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-white p-6 rounded-3xl border border-warm-border card-shadow flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-warm-terracotta/10 text-warm-terracotta flex items-center justify-center">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-warm-textMuted">DIRECT EMAIL</div>
+                            <a href="mailto:liyemavanda000@gmail.com" class="font-bold text-warm-textDark hover:text-warm-terracotta transition-colors">liyemavanda000@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-3xl border border-warm-border card-shadow flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-warm-textMuted">LOCATION</div>
+                            <div class="font-bold text-warm-textDark">South Africa (Remote Ready)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <form id="contactForm" onsubmit="handleContact(event)" class="bg-white p-8 rounded-3xl border border-warm-terracotta/30 card-shadow space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-warm-textDark">YOUR NAME</label>
+                                <input type="text" required placeholder="John Doe" class="w-full px-4 py-3.5 rounded-2xl bg-warm-bg border border-warm-border focus:border-warm-terracotta text-warm-textDark outline-none transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-warm-textDark">YOUR EMAIL</label>
+                                <input type="email" required placeholder="john@example.com" class="w-full px-4 py-3.5 rounded-2xl bg-warm-bg border border-warm-border focus:border-warm-terracotta text-warm-textDark outline-none transition-all">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-warm-textDark">SUBJECT</label>
+                            <input type="text" required placeholder="Project Opportunity / Technical Inquiry" class="w-full px-4 py-3.5 rounded-2xl bg-warm-bg border border-warm-border focus:border-warm-terracotta text-warm-textDark outline-none transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-warm-textDark">MESSAGE</label>
+                            <textarea rows="4" required placeholder="Share details regarding your goal..." class="w-full px-4 py-3.5 rounded-2xl bg-warm-bg border border-warm-border focus:border-warm-terracotta text-warm-textDark outline-none transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-full bg-warm-terracotta hover:bg-warm-terracottaHover text-white font-bold text-base transition-all shadow-md flex items-center justify-center gap-2">
+                            Send Message <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-warm-border text-center text-xs text-warm-textMuted">
+        <p>© 2026 Liyema Vanda. Crafted with modern web standards.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function filterProjects(category, btn) {
+            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+            if(btn) btn.classList.add('active');
+
+            document.querySelectorAll('.project-card').forEach(card => {
+                if(category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        async function handleContact(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending...';
+
+    const payload = {
+        name: form.querySelector('input[placeholder="John Doe"]').value,
+        email: form.querySelector('input[placeholder="john@example.com"]').value,
+        subject: form.querySelector('input[placeholder="Project Opportunity / Technical Inquiry"]').value,
+        message: form.querySelector('textarea').value,
+    };
+
+    try {
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+            alert("✓ Thank you! Your message was delivered directly to Liyema.");
+            form.reset();
+        } else {
+            throw new Error(data.error || 'Failed to send message');
+        }
+    } catch (err) {
+        alert("x Transmission failed. Please try emailing liyemavanda000@gmail.com directly.");
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+    }
+}
+    </script>
+</body>
+</html>
