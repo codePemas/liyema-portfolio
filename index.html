@@ -464,7 +464,7 @@
             });
         }
 
-        async function handleContact(e) {
+      async function handleContact(e) {
     e.preventDefault();
     const form = e.target;
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -493,10 +493,11 @@
             alert("✓ Thank you! Your message was delivered directly to Liyema.");
             form.reset();
         } else {
-            throw new Error(data.error || 'Failed to send message');
+            // This will show you the exact error from the server/Resend instead of faking success
+            throw new Error(data.error || 'Server responded with an error');
         }
     } catch (err) {
-        alert("x Transmission failed. Please try emailing liyemavanda000@gmail.com directly.");
+        alert("❌ Transmission failed: " + err.message);
     } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
