@@ -3,7 +3,6 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
-  // Only allow POST requests
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -16,10 +15,10 @@ export default async function handler(req, res) {
 
   try {
     const data = await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>',
+      from: 'Acme <onboarding@resend.dev>',
       to: ['liyemavanda000@gmail.com'],
-      subject: `[Portfolio Contact] ${subject || 'New Message'}`,
-      replyTo: email,
+      subject: `[Portfolio] ${subject || 'New Message'}`,
+      reply_to: email,
       html: `
         <div style="font-family: sans-serif; padding: 20px; color: #1A1817;">
           <h2 style="color: #C85A32;">New Inquiry from Portfolio</h2>
