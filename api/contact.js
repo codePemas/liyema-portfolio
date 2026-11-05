@@ -15,14 +15,14 @@ export default async function handler(req, res) {
 
   try {
     const data = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'Portfolio Contact <onboarding@resend.dev>',
       to: ['liyemavanda000@gmail.com'],
-      subject: `[Portfolio] ${subject || 'New Message'}`,
-      reply_to: email,
+      subject: `[Portfolio Inquiry] ${subject || 'New Message'} from ${name}`,
+      replyTo: email,
       html: `
         <div style="font-family: sans-serif; padding: 20px; color: #1A1817;">
-          <h2 style="color: #C85A32;">New Inquiry from Portfolio</h2>
-          <p><strong>From:</strong> ${name} (${email})</p>
+          <h2 style="color: #C85A32;">New Inquiry from ${name}</h2>
+          <p><strong>Sender Email:</strong> ${email}</p>
           <p><strong>Subject:</strong> ${subject || 'N/A'}</p>
           <hr style="border: 1px solid #EEEAE5; margin: 20px 0;" />
           <p><strong>Message:</strong></p>
